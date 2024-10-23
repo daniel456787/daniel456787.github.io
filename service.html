@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tymless_fashion_ja - Services</title>
+    <link rel="stylesheet" href="graphics.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <style>
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .image-container {
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .image-container:hover {
+            transform: scale(1.05);
+        }
+        #CartContainer{
+            background-color: black;
+        }
+        #cart {
+             display: flex;
+             flex-direction: row;
+            }
+    </style>
+</head>
+<script src="scripts.js"></script>
+<body style="background-color: black;">
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">Tymless_fashion_ja</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="service.html" class="current">Request Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html">Log Out</a></li>
+                </ul>
+            </div>
+       <!--   <div class="search">
+                <input class="srch" type="search" placeholder="Type here">
+                <a href="#"><button class="btn">Search</button></a>
+            </div>     --> 
+        </div><br>
+
+        <div class="content">
+            <div class="image-grid">
+                <div class="image-container"  onclick="addToCart(this)" id = "watch1"><img src="images/1.jpg" alt="Watch 1"><h2>Watch 1</h2><h3>$3000</h3></div>
+                <div class="image-container" onclick="addToCart(this)" id = "watch2"><img src="images/2.png" alt="Watch 2"><h2>Watch 2</h2><h3>$8000</h3></div>
+                <div class="image-container"  onclick="addToCart(this)" id = "watch3"><img src="images/3.jpg" alt="Watch 3"><h2>Watch 3</h2><h3>$9000</h3></div>
+                <div class="image-container"  onclick="addToCart(this)" id = "watch4"><img src="images/pic4.jpg" alt="Watch 4"><h2>Watch 4</h2><h3>$2500</h3></div>
+                <div class="image-container"  onclick="addToCart(this)" id = "watch5"><img src="images/pic5.jpg" alt="Watch 5"><h2>Watch 5</h2><h3>$6000</h3></div>
+                <div class="image-container"  onclick="addToCart(this)" id = "watch6"><img src="images/pic6.jpg" alt="Watch 6"><h2>Watch 6</h2><h3>$4000</h3></div>
+                <div class="image-container"  onclick="addToCart(this)" id = "watch7"><img src="images/pic7.jpg" alt="Watch 7"><h2>Watch 7</h2><h3>$9000</h3></div>
+                <div class="image-container"  onclick="addToCart(this)" id = "watch8"><img src="images/pic8.jpg" alt="Watch 8"><h2>Watch 8</h2><h3>$9700</h3></div>
+                <div class="image-container"  onclick="addToCart(this)" id = "watch9"><img src="images/pic9.jpg" alt="Watch 9"><h2>Watch 9</h2><h3>$6800</h3></div>
+            </div>
+        </div>
+
+        <div class="content" id = "CartContainer" hidden>
+            <div>
+                <h1>Cart</h1>
+            <ul id = "cart">
+            </ul>
+
+            </div>
+            <div>
+                <h1>Total:</h1>
+            <input type="text" id="Total" value = "0">
+            <!--<p>If you have any questions or need assistance, feel free to <a href="#">contact us</a>.</p>-->
+            <a href="mailto:service@emailtest.com"><button class="cn">Make request</button></a>
+
+            </div>
+            
+        </div>
+
+       <!--   <div class="content">
+            <h1>Our Services<br><span>Quality & Care</span></h1>
+            <p>At Tymless_fashion_ja, we offer a range of services to enhance your shopping experience:</p>
+            <ul>
+                <li><strong>Expert Advice:</strong> Get personalized recommendations from our watch experts.</li>
+                <li><strong>Delivery Services:</strong> Enjoy hassle-free delivery right to your doorstep.</li>
+                <li><strong>Watch Repair:</strong> We provide professional watch repair services to keep your timepieces in top condition.</li>
+                <li><strong>Custom Orders:</strong> Looking for something unique? We facilitate custom watch orders to meet your preferences.</li>
+                <li><strong>Loyalty Program:</strong> Join our loyalty program and enjoy exclusive discounts and offers.</li>
+            </ul>
+            <p>If you have any questions or need assistance, feel free to <a href="#">contact us</a>.</p>
+            <button class="cn"><a href="join.html">Join Us</a></button>
+        </div> -->
+    </div> 
+
+
+   
+</div>
+
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>

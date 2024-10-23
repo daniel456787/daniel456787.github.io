@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff4d4d, #ffe6e6); /* Different gradient */
+    color: #333;
+}
+
+.error-container {
+    text-align: center;
+}
+
+.error-text {
+    font-size: 100px;
+    font-weight: bold;
+    color: #ff3333;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+    font-size: 20px;
+    color: #666;
+    margin-top: 20px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #ff3333;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #cc0000;
+}
