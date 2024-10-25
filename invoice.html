@@ -5,6 +5,10 @@
     <link rel="stylesheet" href="graphics.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <style>
+        #container ul li {
+    display: inline-block;
+    float: none;
+}
         .image-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -37,7 +41,7 @@
     </style>
 </head>
 <script src="scripts.js"></script>
-<body style="background-color: black;">
+<body style="background-color: black;" onload="LoadInvoiceData()">
     <div class="main">
         <div class="navbar">
             <div class="icon">
@@ -55,35 +59,23 @@
                 <a href="#"><button class="btn">Search</button></a>
             </div>     --> 
         </div><br>
-
-        <div class="content">
-            <div class="image-grid">
-                <div class="image-container"  onclick="addToCart(this)" id = "watch1"><img src="images/1.jpg" alt="Watch 1"><h2>Watch 1</h2><h3>$3000</h3></div>
-                <div class="image-container" onclick="addToCart(this)" id = "watch2"><img src="images/2.png" alt="Watch 2"><h2>Watch 2</h2><h3>$8000</h3></div>
-                <div class="image-container"  onclick="addToCart(this)" id = "watch3"><img src="images/3.jpg" alt="Watch 3"><h2>Watch 3</h2><h3>$9000</h3></div>
-                <div class="image-container"  onclick="addToCart(this)" id = "watch4"><img src="images/pic4.jpg" alt="Watch 4"><h2>Watch 4</h2><h3>$2500</h3></div>
-                <div class="image-container"  onclick="addToCart(this)" id = "watch5"><img src="images/pic5.jpg" alt="Watch 5"><h2>Watch 5</h2><h3>$6000</h3></div>
-                <div class="image-container"  onclick="addToCart(this)" id = "watch6"><img src="images/pic6.jpg" alt="Watch 6"><h2>Watch 6</h2><h3>$4000</h3></div>
-                <div class="image-container"  onclick="addToCart(this)" id = "watch7"><img src="images/pic7.jpg" alt="Watch 7"><h2>Watch 7</h2><h3>$9000</h3></div>
-                <div class="image-container"  onclick="addToCart(this)" id = "watch8"><img src="images/pic8.jpg" alt="Watch 8"><h2>Watch 8</h2><h3>$9700</h3></div>
-                <div class="image-container"  onclick="addToCart(this)" id = "watch9"><img src="images/pic9.jpg" alt="Watch 9"><h2>Watch 9</h2><h3>$6800</h3></div>
-            </div>
-        </div>
-
         <div class="content" id = "CartContainer" hidden>
-            <div>
-                <h1>Cart</h1>
-            <ul id = "cart" style="z-index: 2;margin:auto;align-items:flex-start;" class="content">
-            </ul>
-
+            <div style="z-index: 3;">
+                <h1>Invoice</h1>
             </div>
-            <div>
-            <h1>Total: <a id = "cartTotal">0</a></h1>
-            <input type="text" id="Total" value = "0" hidden>
-            <!--<p>If you have any questions or need assistance, feel free to <a href="#">contact us</a>.</p>-->
-            <button class="cn" onclick="SubmitCart()">Submit</button>
+                <ul id = "cart" style="z-index: 2;margin:auto;align-items:flex-start;" class="content">
+                </ul>
 
-            </div>
+
+
+          <div style="z-index: 1;">
+            
+            <h1>Total: <span id = "cartTotal" style="font-weight: bold;"></span></h1>
+            
+            <p>If you have any questions or need assistance, feel free to <a href="mailto:contactus@company.com">contact us</a>.</p>
+            <!--<button class="cn">Contact us</button>-->
+           </div>
+      
             
         </div>
 
